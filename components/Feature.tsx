@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Section from "./Section";
 
 interface FeatureProps {
   image: string;
@@ -9,10 +8,18 @@ interface FeatureProps {
 
 const Feature = ({ image, featureName, featureDescription }: FeatureProps) => {
   return (
-    <div className="flex flex-col gap-y-[15px]">
-      <Image src={image} alt="Manage1" width={50} height={50} />
-      <h3>{featureName}</h3>
-      <p className="text-xs font-medium leading-[17px]">{featureDescription}</p>
+    <div className="flex flex-col items-center text-center md:items-start md:text-left">
+      <Image
+        src={image}
+        alt="Manage1"
+        width={50}
+        height={50}
+        className="mb-2"
+      />
+      <h3 className="mb-1 text-balance">{featureName}</h3>
+      <p className="text-balance text-xs font-medium leading-[17px]">
+        {featureDescription}
+      </p>
     </div>
   );
 };

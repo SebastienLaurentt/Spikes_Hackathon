@@ -3,7 +3,7 @@ import Section from "../Section";
 
 const Manage = () => {
   return (
-    <Section marginTop={true} classname="relative mx-auto  w-[820px]">
+    <Section marginTop={true} classname="relative mx-auto ">
       <Image
         src="/images/ManageBg.png"
         alt="Manage"

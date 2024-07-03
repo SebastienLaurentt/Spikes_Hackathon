@@ -5,8 +5,8 @@ import SellIconWhite from "../public/images/SellIconWhite.svg";
 
 const Header = () => {
   return (
-    <header className="mx-auto text-white md:pt-6 2xl:max-w-[1000px]">
-      <div className="flex w-full flex-row justify-between rounded-lg bg-primary p-2 md:px-4">
+    <header className="mx-auto px-3 pt-4 text-white md:pt-6 2xl:max-w-[1000px]">
+      <div className="flex w-full flex-row justify-between rounded-lg bg-primary p-2.5 md:px-4">
         <div className="flex flex-row items-center gap-x-1">
           <Image src={SellIconWhite} alt="logo" className="size-4" />
           <span>Sell</span>

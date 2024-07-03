@@ -6,11 +6,11 @@ import { Input } from "../ui/input";
 const Waitlist = () => {
   return (
     <Section marginTop={true}>
-      <div className="mx-auto flex h-[281px]  flex-col justify-center gap-y-[29px] rounded-[25px] bg-white">
-        <h2 className={`${dela} mx-auto w-[822px] text-center`}>
+      <div className="mx-auto flex flex-col justify-center gap-y-4 rounded-[25px]  bg-white p-4">
+        <h2 className={`${dela} mx-auto text-center xl:w-[822px]`}>
           Be the first to know about new features, special offers, and more.
         </h2>
-        <div className="mx-auto flex w-[414px] flex-row gap-x-2.5">
+        <div className="mx-auto flex flex-row gap-x-2.5 xl:w-[414px]">
           <Input placeholder="Your best email address" />
           <Button>Join waitlist</Button>
         </div>
