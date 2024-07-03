@@ -27,11 +27,11 @@ const Hero = () => {
         <Input placeholder="Your best email address" className="bg-white" />
         <Button>Try it out</Button>
       </div>
-      <div className="mt-5 flex flex-row gap-x-2.5 items-center">
+      <div className="mt-5 flex flex-row items-center gap-x-2.5">
         <AvatarCircles numPeople={100} avatarUrls={avatarUrls} />
         <div className="text-left text-[10px]">
-          <span className="font-semibold">More than 100+</span> users are selling their products <br /> online
-          with simple & easy ways
+          <span className="font-semibold">More than 100+</span> users are
+          selling their products <br /> online with simple & easy ways
         </div>
       </div>
     </div>
