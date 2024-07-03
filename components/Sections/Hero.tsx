@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <Section marginTop={true}>
       <div className="flex w-full flex-col items-center text-center">
-        <div className="bg-gradient-custom rounded-[45px] px-3 py-[5px] text-[10px] text-white">
+        <div className="bg-gradient-custom rounded-[45px] px-3 py-[5px] text-xs text-white">
           Introducing a new online selling platform 🎉
         </div>
 
