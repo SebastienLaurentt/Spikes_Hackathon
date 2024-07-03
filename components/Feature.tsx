@@ -14,9 +14,9 @@ const Feature = ({ image, featureName, featureDescription }: FeatureProps) => {
         alt="Manage1"
         width={50}
         height={50}
-        className="mb-2"
+        className="mb-2 xl:mb-4 xl:size-[60px]"
       />
-      <h3 className="mb-1 text-balance">{featureName}</h3>
+      <h3 className="mb-1 text-balance xl:mb-2">{featureName}</h3>
       <p className="text-balance text-xs font-medium leading-[17px] md:text-sm">
         {featureDescription}
       </p>

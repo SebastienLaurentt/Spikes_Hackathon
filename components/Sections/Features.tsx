@@ -41,7 +41,7 @@ const Features = () => {
               />
             </li>
           </ul>
-          <div className="hidden xl:relative xl:w-1/3">
+          <div className="hidden xl:relative xl:flex xl:w-1/3">
             <Image
               src="/images/TryFreeImg.png"
               alt="Features"
