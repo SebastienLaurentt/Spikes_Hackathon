@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Manage /> */}
+      <Manage />
       <Features />
       <Waitlist />
     </main>

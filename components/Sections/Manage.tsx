@@ -4,19 +4,13 @@ import Section from "../Section";
 const Manage = () => {
   return (
     <Section marginTop={true} classname="relative mx-auto ">
-      <Image
-        src="/images/ManageBg.png"
-        alt="Manage"
-        width={820}
-        height={275}
-        className="mx-auto"
-      />
-      <div className="absolute inset-0 left-10 flex items-center justify-center gap-10">
+      <div className="bg-gradient-custom  flex items-center gap-4 overflow-hidden rounded-xl py-6 pl-4 lg:pl-16 md:gap-10 lg:gap-20">
         <Image
           src="/images/Manage1.png"
           alt="Manage1"
           width={300}
           height={193}
+          className="ml-[-80px] lg:ml-[-0px]"
         />
         <Image
           src="/images/Manage2.png"
@@ -29,6 +23,7 @@ const Manage = () => {
           alt="Manage3"
           width={200}
           height={193}
+          className="hidden md:flex"
         />
       </div>
     </Section>
