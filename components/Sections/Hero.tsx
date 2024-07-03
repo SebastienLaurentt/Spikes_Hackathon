@@ -2,6 +2,7 @@ import { dela } from "@/lib/font";
 import AvatarCircles from "../ui/avatar-circles";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import Section from "../Section";
 
 const Hero = () => {
   const avatarUrls = [
@@ -12,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="mx-auto mt-10 flex w-full flex-col items-center text-center">
+    <Section marginTop={true} classname=" flex w-full flex-col items-center text-center">
       <div className="bg-gradient-custom rounded-[45px] px-3 py-[5px] text-[10px] text-white">
         Introducing a new online selling platform 🎉
       </div>
@@ -34,7 +35,7 @@ const Hero = () => {
           selling their products <br /> online with simple & easy ways
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

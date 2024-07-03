@@ -1,10 +1,11 @@
 import { dela } from "@/lib/font";
 import Image from "next/image";
 import Feature from "../Feature";
+import Section from "../Section";
 
 const Features = () => {
   return (
-    <div className="mx-auto mt-10 w-[820px]">
+    <Section marginTop={true} classname="mx-auto w-[820px]">
       <h2 className={`${dela} mb-8`}>Features</h2>
       <div className="flex flex-row">
         <ul className="grid w-2/3  grid-cols-2 gap-y-8">
@@ -54,7 +55,7 @@ const Features = () => {
           />
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

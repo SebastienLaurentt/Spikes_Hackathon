@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Section from "../Section";
 
 const Manage = () => {
   return (
-    <div className="relative mx-auto mt-10 w-[820px]">
+    <Section marginTop={true} classname="relative mx-auto  w-[820px]">
       <Image
         src="/images/ManageBg.png"
         alt="Manage"
@@ -30,7 +31,7 @@ const Manage = () => {
           height={193}
         />
       </div>
-    </div>
+    </Section>
   );
 };
 
