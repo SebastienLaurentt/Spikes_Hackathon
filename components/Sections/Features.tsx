@@ -7,7 +7,9 @@ const Features = () => {
   return (
     <Section marginTop={true}>
       <div>
-        <h2 className={`${dela} mb-8 text-center lg:text-left w-full`}>Features</h2>
+        <h2 className={`${dela} mb-8 w-full text-center xl:text-left`}>
+          Features
+        </h2>
         <div className="flex flex-row justify-between">
           <ul className="grid grid-cols-2  gap-y-8 xl:w-1/2">
             <li className="xl:w-[259px]">

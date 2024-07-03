@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className="my-6 flex flex-col gap-y-4">
           <h1 className={`${dela}`}>Best way to sell your digital product </h1>
-          <p className="text-[14px] md:text-sm">
+          <p className="text-[14px] md:text-sm lg:text-md">
             Go from Zero to Hero with simple platform that helps <br /> creators
             like you sell their digital products online.
           </p>
@@ -33,7 +33,7 @@ const Hero = () => {
 
         <div className="flex flex-col items-center gap-y-2.5 md:flex-row md:gap-x-2.5">
           <AvatarCircles numPeople={100} avatarUrls={avatarUrls} />
-          <div className="w-[250px] text-xs md:text-left">
+          <div className="w-[250px] text-xs md:text-left lg:w-[300px] lg:text-sm">
             <span className=" font-semibold">More than 100+</span> users are
             selling their products online with simple & easy ways
           </div>

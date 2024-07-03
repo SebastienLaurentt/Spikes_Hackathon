@@ -8,7 +8,7 @@ interface FeatureProps {
 
 const Feature = ({ image, featureName, featureDescription }: FeatureProps) => {
   return (
-    <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+    <div className="flex flex-col items-center text-center xl:items-start xl:text-left">
       <Image
         src={image}
         alt="Manage1"
