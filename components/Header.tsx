@@ -4,7 +4,7 @@ import SellIconWhite from "../public/images/SellIconWhite.svg";
 
 const Header = () => {
   return (
-    <header className="mx-auto mt-10 flex h-[37px] w-[606px] flex-row items-center justify-between rounded-[10px] bg-header-black px-2.5 py-1.5 text-[14px] text-white">
+    <header className="bg-primary mx-auto mt-10 flex h-[37px] w-[606px] flex-row items-center justify-between rounded-[10px] px-2.5 py-1.5 text-[14px] text-white">
       <div className="flex flex-row items-center gap-x-[5px]">
         <Image src={SellIconWhite} alt="logo" width={16.62} height={16} />
         <span>Sell</span>
