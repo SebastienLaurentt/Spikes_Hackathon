@@ -5,10 +5,11 @@ import Section from "../Section";
 
 const Features = () => {
   return (
-    <Section marginTop={true} classname="mx-auto w-[820px]">
+    <Section marginTop={true}>
+      <div>
       <h2 className={`${dela} mb-8`}>Features</h2>
-      <div className="flex flex-row">
-        <ul className="grid w-2/3  grid-cols-2 gap-y-8">
+      <div className="flex flex-row justify-between">
+        <ul className="grid w-1/2  grid-cols-2 gap-y-8">
           <li className="w-[259px]">
             <Feature
               featureName="Save time & Reduce cost"
@@ -54,6 +55,7 @@ const Features = () => {
             className="absolute bottom-0 left-0"
           />
         </div>
+      </div>
       </div>
     </Section>
   );
