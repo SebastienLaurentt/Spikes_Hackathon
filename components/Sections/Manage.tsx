@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Manage = () => {
   return (
-    <div className="relative mx-auto w-[820px]">
+    <div className="relative mx-auto mt-10 w-[820px]">
       <Image
         src="/images/ManageBg.png"
         alt="Manage"
