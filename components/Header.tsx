@@ -5,18 +5,18 @@ import SellIconWhite from "../public/images/SellIconWhite.svg";
 
 const Header = () => {
   return (
-    <header className="mx-auto px-3 pt-4 text-white md:pt-6 2xl:max-w-[1000px]">
+    <header className="mx-auto px-3 pt-4 text-white md:px-8 md:pt-6 2xl:max-w-[1000px]">
       <div className="flex w-full flex-row justify-between rounded-lg bg-primary p-2.5 md:px-4">
-        <div className="flex flex-row items-center gap-x-1">
-          <Image src={SellIconWhite} alt="logo" className="size-4" />
-          <span>Sell</span>
+        <div className="flex flex-row items-center gap-x-1 md:gap-x-2">
+          <Image src={SellIconWhite} alt="logo" className="size-4 md:size-6" />
+          <span className="md:text-md">Sell</span>
         </div>
         <Link
           href="https://x.com/Seb_webdev"
-          className="flex flex-row items-center gap-x-1"
+          className="flex flex-row items-center gap-x-1 md:gap-x-2"
         >
-          <Twitter size={16} fill="white" />
-          <span className="text-xs">Follow us on Twitter</span>
+          <Twitter className="size-4 md:size-6" fill="white" />
+          <span className="text-xs md:text-sm">Follow us on Twitter</span>
         </Link>
       </div>
     </header>

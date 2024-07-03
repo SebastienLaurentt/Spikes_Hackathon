@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className="my-6 flex flex-col gap-y-4">
           <h1 className={`${dela}`}>Best way to sell your digital product </h1>
-          <p className="text-[14px]">
+          <p className="text-[14px] md:text-sm">
             Go from Zero to Hero with simple platform that helps <br /> creators
             like you sell their digital products online.
           </p>

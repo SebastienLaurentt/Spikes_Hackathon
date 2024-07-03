@@ -8,7 +8,7 @@ interface FeatureProps {
 
 const Feature = ({ image, featureName, featureDescription }: FeatureProps) => {
   return (
-    <div className="flex flex-col items-center text-center md:items-start md:text-left">
+    <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
       <Image
         src={image}
         alt="Manage1"
@@ -17,7 +17,7 @@ const Feature = ({ image, featureName, featureDescription }: FeatureProps) => {
         className="mb-2"
       />
       <h3 className="mb-1 text-balance">{featureName}</h3>
-      <p className="text-balance text-xs font-medium leading-[17px]">
+      <p className="text-balance text-xs font-medium leading-[17px] md:text-sm">
         {featureDescription}
       </p>
     </div>

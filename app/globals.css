@@ -45,14 +45,14 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply text-2xl md:text-3xl lg:text-6xl xl:text-7xl xl:w-[633px] leading-10 xl:leading-[54px] mx-auto;
+    @apply text-2xl md:text-3xl lg:text-6xl md:w-[500px] xl:text-7xl xl:w-[633px] leading-10 xl:leading-[54px] mx-auto;
   }
 
   h2 {
-    @apply text-lg leading-8 xl:text-[32px] xl:leading-[46px];
+    @apply text-lg md:text-xl leading-8 md:w-[600px] md:leading-9 xl:text-[32px] xl:leading-[46px];
   }
   h3 {
-    @apply text-md leading-[20px] font-extrabold;
+    @apply text-md md:text-lg md:w-[200px]  leading-5 md:leading-6 font-extrabold;
   }
 
   .bg-gradient-custom {
