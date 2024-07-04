@@ -1,7 +1,6 @@
 import { dm_sans } from "@/lib/font";
 import type { Metadata } from "next";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={`${dm_sans}`}>
-        <Header />
         {children}
         <Footer />
       </body>

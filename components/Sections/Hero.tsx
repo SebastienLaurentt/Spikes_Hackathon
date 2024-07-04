@@ -1,4 +1,5 @@
 import { dela } from "@/lib/font";
+import Header from "../Header";
 import Section from "../Section";
 import AvatarCircles from "../ui/avatar-circles";
 import { Button } from "../ui/button";
@@ -13,8 +14,16 @@ const Hero = () => {
   ];
 
   return (
-    <Section marginTop={true}>
-      <div className="flex w-full flex-col items-center text-center">
+    <Section classname="relative overflow-hidden 2xl:overflow-visible" marginBottom={true}>
+      <Header />
+
+      {/* Diffuse Circles */}
+      <div className="absolute left-20 top-[-100px] -z-20 size-[600px] rounded-full bg-[#FEA492] opacity-50 blur-[100px]"></div>
+      <div className="absolute right-20 top-[-100px] -z-20 size-[600px] rounded-full bg-[#92C4FE] opacity-50 blur-[100px]"></div>
+      <div className="absolute bottom-[-50px] right-1/3 z-30 size-[400px] rounded-full bg-[#AE92FE] opacity-50 blur-[100px]"></div>
+
+      <div className="bg-custom-grid absolute inset-6 -z-10 size-full"></div>
+      <div className="mb:mt-24 mt-20 flex w-full flex-col items-center text-center lg:mt-28">
         <div className="bg-gradient-custom rounded-[45px] px-3 py-[5px] text-xs text-white">
           Introducing a new online selling platform 🎉
         </div>

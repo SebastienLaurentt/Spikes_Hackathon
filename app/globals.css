@@ -58,4 +58,9 @@
   .bg-gradient-custom {
     background: linear-gradient(90deg, #e693a5 0%, #3951e5 100%);
   }
+
+  .bg-custom-grid {
+    background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+    background-size: 6rem 4rem;
+  }
 }
