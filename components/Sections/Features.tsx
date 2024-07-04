@@ -76,28 +76,28 @@ const Features = () => {
               <Feature
                 featureName="Save time & Reduce cost"
                 featureDescription="Building your own online store, shopping cart, checkout, and licensing is time-consuming"
-                image="/images/FeatureMoney.png" // Exemple de chemin vers votre image
+                image="/images/FeatureMoney.svg" 
               />
             </li>
             <li id="features-element3" className="opacity-0 xl:w-[254px]">
               <Feature
                 featureName="More features you need"
                 featureDescription="We simplify all that by combining all of the features and solutions you need to sell"
-                image="/images/FeatureBox.png"
+                image="/images/FeatureBox.svg"
               />
             </li>
             <li id="features-element4" className="opacity-0 xl:w-[249px]">
               <Feature
                 featureName="Sell your popular product more"
                 featureDescription="Designed from the ground up to be easy to use and quick to set up for sellers"
-                image="/images/FeatureHeart.png"
+                image="/images/FeatureHeart.svg"
               />
             </li>
             <li id="features-element5" className="opacity-0 xl:w-[274px]">
               <Feature
                 featureName="Sell it across the Globe"
                 featureDescription="Expand into new global markets with ease when you automatically display popular pricing"
-                image="/images/FeatureGlobe.png"
+                image="/images/FeatureGlobe.svg"
               />
             </li>
           </ul>
