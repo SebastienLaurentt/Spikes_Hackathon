@@ -2,6 +2,7 @@ import { Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SellIconWhite from "../public/images/SellIconWhite.svg";
+import { inter } from "@/lib/font";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
           className="flex flex-row items-center gap-x-1 md:gap-x-2"
         >
           <Twitter className="size-4 md:size-6" fill="white" />
-          <span className="text-xs md:text-sm">Follow us on Twitter</span>
+          <span className={`${inter}text-xs md:text-sm`}>Follow us on Twitter</span>
         </Link>
       </div>
     </header>
