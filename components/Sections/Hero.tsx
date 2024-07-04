@@ -24,7 +24,7 @@ const Hero = () => {
       {/* Diffuse Circles */}
       <div className="absolute left-0 -z-20 size-[250px] rounded-full bg-[#FEA492] opacity-60 blur-[100px] md:left-10 md:top-[-60px] md:size-[400px] lg:left-20 lg:top-[-100px] lg:size-[600px]" />
       <div className="absolute right-0 -z-20 size-[250px] rounded-full bg-[#92C4FE] opacity-60 blur-[100px] md:right-10 md:top-[-60px] md:size-[400px] lg:right-20 lg:top-[-100px] lg:size-[600px]" />
-      <div className="absolute bottom-0 left-1/2 z-30 size-[250px] -translate-x-1/2 rounded-full bg-[#AE92FE] opacity-60 blur-[100px] md:bottom-[-20px]  lg:bottom-[-50px] lg:right-1/3 lg:size-[400px]" />
+      <div className="absolute bottom-0 left-1/2 z-30 size-[250px] -translate-x-1/2 rounded-full bg-[#AE92FE] opacity-40 blur-[100px] md:bottom-[-20px]  lg:bottom-[-50px] lg:right-1/3 lg:size-[400px]" />
 
       <div className="bg-custom-grid absolute inset-6 -z-10 size-full"></div>
       <div className="mb:mt-24 mt-20 flex w-full flex-col items-center text-center lg:mt-28">
