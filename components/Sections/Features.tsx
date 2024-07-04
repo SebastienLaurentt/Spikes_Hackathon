@@ -2,9 +2,10 @@
 
 import { dela } from "@/lib/font";
 import gsap from "gsap";
-import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useEffect } from "react";
+import StoreCard from "../Cards/StoreCard";
 import Feature from "../Feature";
 import Section from "../Section";
 
@@ -28,7 +29,7 @@ const Features = () => {
       "#features-element2",
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1, delay: 0.3 },
-     "<"
+      "<"
     );
     tl.fromTo(
       "#features-element3",
@@ -66,17 +67,17 @@ const Features = () => {
       <div>
         <h2
           id="features-element1"
-          className={`${dela} mb-8 w-full text-center opacity-0 xl:text-left`}
+          className={`${dela} mb-8 w-full text-center opacity-0 lg:text-left`}
         >
           Features
         </h2>
         <div className="flex flex-row justify-between">
-          <ul className="grid grid-cols-2  gap-y-8 xl:w-1/2">
+          <ul className="grid grid-cols-2  gap-y-8 lg:w-3/5 xl:w-1/2">
             <li id="features-element2" className="opacity-0 xl:w-[259px]">
               <Feature
                 featureName="Save time & Reduce cost"
                 featureDescription="Building your own online store, shopping cart, checkout, and licensing is time-consuming"
-                image="/images/FeatureMoney.svg" 
+                image="/images/FeatureMoney.svg"
               />
             </li>
             <li id="features-element3" className="opacity-0 xl:w-[254px]">
@@ -103,22 +104,16 @@ const Features = () => {
           </ul>
           <div
             id="features-element5"
-            className="hidden opacity-0 xl:relative xl:flex xl:w-1/3"
+            className="hidden opacity-0 lg:relative lg:flex lg:w-1/3 lg:overflow-hidden xl:overflow-visible"
           >
             <Image
               src="/images/TryFreeImg.png"
               alt="Features"
               width={340}
               height={275}
-              className="absolute"
+              className="absolute  xl:-left-20"
             />
-            <Image
-              src="/images/Manage1.png"
-              alt="Features"
-              width={340}
-              height={275}
-              className="absolute bottom-0 left-0"
-            />
+            <StoreCard className="absolute bottom-0 lg:-right-12 xl:right-0" />
           </div>
         </div>
       </div>
