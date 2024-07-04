@@ -63,9 +63,10 @@ const Hero = () => {
       <div className="mb:mt-24 mt-20 flex w-full flex-col items-center text-center lg:mt-28">
         <div
           id="hero-introducing"
-          className="bg-gradient-custom rounded-[45px] px-3 py-[5px] text-xs text-white opacity-0"
+          className="bg-gradient-custom relative overflow-hidden rounded-[45px] px-3 py-[5px] text-xs text-white  opacity-0"
         >
           Introducing a new online selling platform 🎉
+          <div className="shimmer-effect absolute inset-0"></div>
         </div>
 
         <div className="my-6 flex flex-col gap-y-4">
