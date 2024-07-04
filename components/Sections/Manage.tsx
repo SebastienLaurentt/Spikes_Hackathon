@@ -1,4 +1,6 @@
-import Image from "next/image";
+import DataCard from "../Cards/DataCard";
+import MembersCard from "../Cards/MembersCard";
+import StoreCard from "../Cards/StoreCard";
 import Section from "../Section";
 
 const Manage = () => {
@@ -15,28 +17,10 @@ const Manage = () => {
         <div className="size-[62%] -translate-y-24 rounded-[25px] border border-slate-200  bg-white/60 md:size-[70%] md:-translate-y-20 xl:size-[79%] xl:-translate-y-28" />
       </div>
       {/* Main content */}
-      <div className="bg-gradient-custom relative z-30 flex items-center gap-4 overflow-hidden rounded-[25px] py-6 pl-4 md:gap-10 lg:gap-20 lg:pl-16 xl:gap-8 xl:pl-8">
-        <Image
-          src="/images/Manage1.png"
-          alt="Manage1"
-          width={300}
-          height={193}
-          className="ml-[-80px] lg:ml-0 xl:w-[650px]"
-        />
-        <Image
-          src="/images/Manage2.png"
-          alt="Manage2"
-          width={300}
-          height={193}
-          className="xl:w-[650px]"
-        />
-        <Image
-          src="/images/Manage3.png"
-          alt="Manage3"
-          width={300}
-          height={193}
-          className="hidden md:flex"
-        />
+      <div className="bg-gradient-custom relative z-30 flex items-center gap-4 overflow-hidden rounded-[25px] py-6 pl-4 md:gap-6 lg:gap-12 xl:justify-around">
+        <StoreCard />
+        <MembersCard />
+        <DataCard />
       </div>
     </Section>
   );
