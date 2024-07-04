@@ -18,8 +18,12 @@ const dela_init = Dela_Gothic_One({
   variable: "--font-dela",
 });
 
+
+
 export const inter = inter_init.className;
 
 export const dm_sans = dm_sans_init.className;
 
 export const dela = dela_init.className;
+
+
