@@ -46,7 +46,7 @@ const Hero = () => {
 
         <div className="flex flex-col items-center gap-y-2.5 md:flex-row md:gap-x-2.5">
           <AvatarCircles numPeople={100} avatarUrls={avatarUrls} />
-          <div className="w-[250px] text-xs md:text-left lg:w-[300px] lg:text-sm">
+          <div className="w-[250px] text-xs md:text-left lg:w-[320px] lg:text-sm">
             <span className=" font-semibold">More than 100+</span> users are
             selling their products online with simple & easy ways
           </div>
