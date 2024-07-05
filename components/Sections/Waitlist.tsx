@@ -17,7 +17,7 @@ const Waitlist = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#waitlist-section",
-        start: "top center+=250",
+        start: "top center+=300",
       },
     });
     tl.fromTo(
