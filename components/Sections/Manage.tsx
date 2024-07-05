@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import DataCard from "../Cards/DataCard";
 import MembersCard from "../Cards/MembersCard";
 import StoreCard from "../Cards/StoreCard";
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Manage = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -31,6 +32,51 @@ const Manage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (carouselRef.current) {
+        const cards = carouselRef.current.querySelectorAll(".carousel-card");
+        let newIndex = 0;
+        cards.forEach((card, index) => {
+          const rect = card.getBoundingClientRect();
+          const cardWidth = rect.width;
+          const windowWidth =
+            window.innerWidth || document.documentElement.clientWidth;
+          const isVisibleMoreThanHalf =
+            rect.left + cardWidth * 0.5 >= 0 &&
+            rect.right - cardWidth * 0.5 <= windowWidth;
+
+          if (isVisibleMoreThanHalf) {
+            newIndex = index;
+          }
+
+          if (!isVisibleMoreThanHalf) {
+            card.classList.add("grayscale-filter");
+          } else {
+            card.classList.remove("grayscale-filter");
+          }
+        });
+        setActiveIndex(newIndex);
+      }
+    };
+
+    handleScroll(); // Check on mount
+    carouselRef.current?.addEventListener("scroll", handleScroll);
+
+    return () => {
+      carouselRef.current?.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleDotClick = (index: number) => {
+    if (carouselRef.current) {
+      const card =
+        carouselRef.current.querySelectorAll(".carousel-card")[index];
+      card.scrollIntoView({ behavior: "smooth", inline: "center" });
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <Section id="manage-section" classname="relative mx-auto">
       {/* Background shapes */}
@@ -46,20 +92,20 @@ const Manage = () => {
         </div>
 
         {/* Main content */}
-        <div className="bg-gradient-custom relative z-30 flex items-center  overflow-hidden rounded-[25px] py-6 shadow-xl md:justify-around">
+        <div className="bg-gradient-custom relative z-30 flex items-center overflow-hidden rounded-[25px] py-6 shadow-xl md:justify-around">
           <div
             ref={carouselRef}
             className="flex overflow-x-auto"
             style={{ scrollbarWidth: "none" }}
           >
-            <div className="mx-4 flex space-x-4 md:mx-6 md:space-x-6 lg:mx-0 lg:space-x-10">
-              <div className="w-80 shrink-0">
+            <div className="mx-4 flex space-x-4 md:mx-6 md:space-x-6 lg:space-x-10 xl:mx-0">
+              <div className="carousel-card w-80 shrink-0">
                 <StoreCard />
               </div>
-              <div className="w-80 shrink-0">
+              <div className="carousel-card w-80 shrink-0">
                 <MembersCard />
               </div>
-              <div className="w-80 shrink-0">
+              <div className="carousel-card w-80 shrink-0">
                 <DataCard />
               </div>
             </div>
