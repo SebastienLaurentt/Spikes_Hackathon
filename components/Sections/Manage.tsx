@@ -39,15 +39,15 @@ const Manage = () => {
           <div className="size-[88%] -translate-y-8  rounded-[25px] border border-slate-200 bg-white  xl:size-[96%] xl:-translate-y-6" />
         </div>
         <div className="absolute inset-0 z-10 flex  items-center justify-center ">
-          <div className="size-[76%] -translate-y-16 rounded-[25px] border border-slate-200  bg-white/80 md:size-4/5 md:-translate-y-14 xl:size-[92%] xl:-translate-y-12" />
+          <div className="size-[76%] -translate-y-16 rounded-[25px] border border-slate-100  bg-white/60 md:size-4/5 md:-translate-y-14 xl:size-[92%] xl:-translate-y-12" />
         </div>
         <div className="absolute inset-0 z-0 flex  items-center justify-center ">
-          <div className="size-[62%] -translate-y-24 rounded-[25px] border border-slate-200  bg-white/60 md:size-[70%] md:-translate-y-20 xl:size-[88%] xl:translate-y-[-72px]" />
+          <div className="size-[62%] -translate-y-24 rounded-[25px] border border-slate-100  bg-white/40 md:size-[70%] md:-translate-y-20 xl:size-[88%] xl:translate-y-[-72px]" />
         </div>
 
         {/* Main content */}
-        <div className="bg-gradient-custom relative z-30 flex items-center gap-4 overflow-hidden rounded-[25px] py-6 shadow-xl xl:justify-around">
-          <div className="relative z-40 -ml-8 md:-ml-10 lg:ml-0 ">
+        <div className="bg-gradient-custom relative z-30 flex items-center gap-4 overflow-hidden rounded-[25px] py-6 shadow-xl md:justify-around">
+          <div className="relative z-40 -ml-8 md:ml-0 ">
             <StoreCard />
           </div>
           <MembersCard />
