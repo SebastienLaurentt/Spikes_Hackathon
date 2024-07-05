@@ -1,6 +1,5 @@
 import { dm_sans } from "@/lib/font";
 import type { Metadata } from "next";
-import Footer from "../components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,10 +37,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={`${dm_sans}`}>
-        {children}
-        <Footer />
-      </body>
+      <body className={`${dm_sans}`}>{children}</body>
     </html>
   );
 }
