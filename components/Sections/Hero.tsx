@@ -37,7 +37,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <Section classname="relative overflow-visible" marginBottom={true}>
+    <Section classname="relative overflow-hidden xl:overflow-visible" marginBottom={true}>
       <Header id="header" />
 
       {/* Diffuse Circles */}
