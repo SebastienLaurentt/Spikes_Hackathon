@@ -32,50 +32,48 @@ const Manage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (carouselRef.current) {
-        const cards = carouselRef.current.querySelectorAll(".carousel-card");
-        let newIndex = 0;
-        cards.forEach((card, index) => {
-          const rect = card.getBoundingClientRect();
-          const cardWidth = rect.width;
-          const windowWidth =
-            window.innerWidth || document.documentElement.clientWidth;
-          const isVisibleMoreThanHalf =
-            rect.left + cardWidth * 0.5 >= 0 &&
-            rect.right - cardWidth * 0.5 <= windowWidth;
-
-          if (isVisibleMoreThanHalf) {
-            newIndex = index;
-          }
-
-          if (!isVisibleMoreThanHalf) {
-            card.classList.add("grayscale-filter");
-          } else {
-            card.classList.remove("grayscale-filter");
-          }
-        });
-        setActiveIndex(newIndex);
-      }
-    };
-
-    handleScroll(); // Check on mount
-    carouselRef.current?.addEventListener("scroll", handleScroll);
-
-    return () => {
-      carouselRef.current?.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleDotClick = (index: number) => {
+  const handleVisibility = () => {
     if (carouselRef.current) {
-      const card =
-        carouselRef.current.querySelectorAll(".carousel-card")[index];
-      card.scrollIntoView({ behavior: "smooth", inline: "center" });
-      setActiveIndex(index);
+      const cards = carouselRef.current.querySelectorAll(".carousel-card");
+      let newIndex = 0;
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        const cardWidth = rect.width;
+        const windowWidth =
+          window.innerWidth || document.documentElement.clientWidth;
+        const isVisibleMoreThanHalf =
+          rect.left + cardWidth * 0.5 >= 0 &&
+          rect.right - cardWidth * 0.5 <= windowWidth;
+
+        if (isVisibleMoreThanHalf) {
+          newIndex = index;
+        }
+
+        if (!isVisibleMoreThanHalf) {
+          card.classList.add("grayscale-filter");
+        } else {
+          card.classList.remove("grayscale-filter");
+        }
+      });
+      setActiveIndex(newIndex);
     }
   };
+
+  useEffect(() => {
+    handleVisibility(); // Check on mount
+
+    const handleResize = () => {
+      handleVisibility();
+    };
+
+    carouselRef.current?.addEventListener("scroll", handleVisibility);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      carouselRef.current?.removeEventListener("scroll", handleVisibility);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Section id="manage-section" classname="relative mx-auto">
