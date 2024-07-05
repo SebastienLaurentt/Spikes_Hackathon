@@ -10,10 +10,10 @@ const Waitlist = () => {
         <h2 className={`${dela} mx-auto text-center xl:w-[822px]`}>
           Be the first to know about new features, special offers, and more.
         </h2>
-        <div className="mx-auto flex flex-row gap-x-2.5 xl:w-[414px]">
-          <Input placeholder="Your best email address" />
-          <Button>Join waitlist</Button>
-        </div>
+        <form className="mx-auto flex flex-row gap-x-2.5 xl:w-[414px]">
+          <Input aria-label="Enter Email" placeholder="Your best email address" />
+          <Button aria-label="Try Sell">Join waitlist</Button>
+        </form>
       </div>
     </Section>
   );

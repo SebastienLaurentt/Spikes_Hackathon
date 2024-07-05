@@ -80,13 +80,13 @@ const Hero = () => {
             Go from Zero to Hero with simple platform that helps <br /> creators
             like you sell their digital products online.
           </p>
-          <div
+          <form
             id="hero-button"
             className="z-50 mx-auto flex flex-row gap-x-2.5 opacity-0"
           >
-            <Input placeholder="Your best email address" className="bg-white" />
-            <Button>Try it out</Button>
-          </div>
+            <Input aria-label="Enter Email" placeholder="Your best email address" className="bg-white" />
+            <Button aria-label="Try Sell">Try it out</Button>
+          </form>
         </div>
 
         <div
