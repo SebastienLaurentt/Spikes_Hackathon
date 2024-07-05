@@ -18,52 +18,38 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    const screenWidth = window.innerWidth;
-    // Hero Text Animation
+    // Animate ellipses first
+    gsap.fromTo(".ellipse", { scale: 0 }, { scale: 1, duration: 2 });
+
+    // Animate header and hero title together
     gsap.fromTo(
-      "#hero-title",
+      [
+        "#hero-title",
+        "#header",
+        "#hero-description",
+        "#hero-button",
+        "#hero-socials",
+        "#hero-introducing",
+      ],
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1 }
-    );
-    gsap.fromTo(
-      "#hero-description",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-    gsap.fromTo(
-      "#hero-button",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-    gsap.fromTo(
-      "#hero-socials",
-      { opacity: 0 },
-      { opacity: 1, duration: 1, delay: 0.5 }
-    );
-    gsap.fromTo(
-      "#hero-introducing",
-      { opacity: 0 },
-      { opacity: 1, duration: 1, delay: 0.5 }
     );
   }, []);
 
   return (
-    <Section
-      classname="relative overflow-hidden 2xl:overflow-visible"
-      marginBottom={true}
-    >
-      <Header />
+    <Section classname="relative overflow-visible" marginBottom={true}>
+      <Header id="header" />
 
       {/* Diffuse Circles */}
-      <div className="absolute left-0 -z-20 size-[250px] rounded-full bg-[#FEA492] opacity-60 blur-[100px] md:left-10 md:top-[-60px] md:size-[400px] lg:left-20 lg:top-[-100px] lg:size-[600px]" />
-      <div className="absolute right-0 -z-20 size-[250px] rounded-full bg-[#92C4FE] opacity-60 blur-[100px] md:right-10 md:top-[-60px] md:size-[400px] lg:right-20 lg:top-[-100px] lg:size-[600px]" />
-      <div className="absolute bottom-0 left-1/2 z-30 size-[250px] -translate-x-1/2 rounded-full bg-[#AE92FE] opacity-40 blur-[100px] md:bottom-[-20px]  lg:bottom-[-50px] lg:right-1/3 lg:size-[400px]" />
+      <div className="ellipse absolute left-0 -z-20 size-[250px] rounded-full bg-[#FEA492] opacity-60 blur-[100px] md:left-10 md:top-[-60px] md:size-[400px] lg:left-20 lg:top-[-100px] lg:size-[600px]" />
+      <div className="ellipse absolute right-0 -z-20 size-[250px] rounded-full bg-[#92C4FE] opacity-60 blur-[100px] md:right-10 md:top-[-60px] md:size-[400px] lg:right-20 lg:top-[-100px] lg:size-[600px]" />
+      <div className="ellipse absolute bottom-0 left-1/2 z-30 size-[250px] -translate-x-1/2 rounded-full bg-[#AE92FE] opacity-40 blur-[100px] md:bottom-[-20px] lg:bottom-[-50px] lg:right-1/3 lg:size-[400px]" />
 
       <div className="bg-custom-grid absolute inset-6 -z-10 size-full"></div>
       <div className="mb:mt-24 mt-20 flex w-full flex-col items-center text-center lg:mt-28">
         <div
           id="hero-introducing"
-          className="bg-gradient-custom relative overflow-hidden rounded-[45px] px-3 py-[5px] text-xs text-white  opacity-0"
+          className="bg-gradient-custom relative overflow-hidden rounded-[45px] px-3 py-[5px] text-xs text-white opacity-0"
         >
           Introducing a new online selling platform 🎉
           <div className="shimmer-effect absolute inset-0"></div>
@@ -84,7 +70,11 @@ const Hero = () => {
             id="hero-button"
             className="z-50 mx-auto flex flex-row gap-x-2.5 opacity-0"
           >
-            <Input aria-label="Enter Email" placeholder="Your best email address" className="bg-white" />
+            <Input
+              aria-label="Enter Email"
+              placeholder="Your best email address"
+              className="bg-white"
+            />
             <Button aria-label="Try Sell">Try it out</Button>
           </form>
         </div>
